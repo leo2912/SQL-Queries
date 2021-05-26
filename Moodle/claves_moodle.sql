@@ -7,8 +7,8 @@ SELECT
 FROM
 	mdl_quiz q
 WHERE
-	(from_unixtime(q.timeclose) > CURDATE())
-	AND (from_unixtime(q.timeclose) < CURDATE()+1)
+	(from_unixtime(q.timeclose) > CURDATE()+1)
+	AND (from_unixtime(q.timeclose) < CURDATE()+2)
 	AND q.course IN (3337,4185,4184)
 	
 	#WHERE (from_unixtime(q.timeclose) > '2019-07-01 00:00:00') AND q.course IN (3613)
