@@ -14,7 +14,7 @@ SELECT cic.nombre_ciclo AS ciclo, s.nombre_seiva AS seiva, e.nombre_escuela AS e
                       JOIN seivas_tipos_porcentajes stp ON c.mes = stp.mes
                       
                       
-	WHERE m.tipo_materia = 'A'  AND al.id_alumno IN (175512) AND stp.id_tipo_seiva = 'S'#  AND cic.id_ciclo = 8
+	WHERE m.tipo_materia = 'A'  AND al.id_alumno IN (154723) AND stp.id_tipo_seiva = 'P'#  AND cic.id_ciclo = 8
 	#WHERE m.tipo_materia = 'A'  AND e.id_escuela IN (10,30,50,53,56,59,62,66,69,73,76,69,82,85,89,92,100,104,107,110,114,123) AND stp.id_tipo_seiva = 'S' AND cic.id_ciclo = 8 AND (nombre_grupo LIKE ('1 %') OR nombre_grupo LIKE ('2 %') OR nombre_grupo LIKE ('3 %'))
 	GROUP BY ciclo, seiva, escuela, grupo, materia, stp.mes, matricula, apellido, nombre
 	ORDER BY matricula, grupo, materia
