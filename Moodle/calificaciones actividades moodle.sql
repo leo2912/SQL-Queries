@@ -54,4 +54,5 @@ LEFT OUTER JOIN mdl_lesson_grades mlg ON ml.id = mlg.lessonid AND us.id = mlg.us
 LEFT OUTER JOIN mdl_forum mf ON mcm.`instance` = mf.id AND gi.itemmodule = 'forum'
 LEFT OUTER JOIN mdl_forum_grades mfg ON mf.id = mfg.forum AND us.id = mfg.userid
 
-WHERE gi.itemtype = 'mod' AND mcm.visible = 1 AND cou.startdate >= 1596240000  #AND cou.id = 152; # AND us.username = 'a200304180' 
+#WHERE gi.itemtype = 'mod' AND mcm.visible = 1 AND cou.startdate >= 1596240000  #AND cou.id = 152; # AND us.username = 'a200304180' 
+WHERE cou.id = 5068; # AND us.username = 'a200304180' 

@@ -1,5 +1,5 @@
 USE leogonmu_mood113;
-SET @apellido := 'Gomez San%';
+SET @apellido := '%Briseiday%';
 SELECT id, username, lastname, firstname, email, suspended, FROM_UNIXTIME(lastlogin)
 #FROM mdl_user
 FROM mdlph_user mu 

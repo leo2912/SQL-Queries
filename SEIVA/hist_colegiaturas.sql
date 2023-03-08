@@ -9,7 +9,7 @@ FROM cc_abonos ab JOIN alumnos al ON ab.id_alumno = al.id_alumno
 	
 	
 	
-WHERE ab.id_alumno IN ('175512')
+WHERE ab.id_alumno IN ('145381')
 GROUP BY cab.id_abono
 
 #GROUP BY ab.id_abono

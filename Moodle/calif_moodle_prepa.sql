@@ -1,6 +1,6 @@
 USE moodleiva;
 #Secundaria
-SET @course := 4184;
+#SET @course := 4184;
 
 #Prepa
 #SET @course := 4185;
@@ -11,6 +11,12 @@ SET @course := 4184;
 #Inglés
 #SET @course := 3337;
 
+#Derecho
+#SET @course := 3674;
+
+#Derecho
+SET @course := 3678;
+
 SELECT REPLACE(q.NAME, ' - ','|') AS 'Examen,Grado,Materia', gmem.sede AS Sede, u.lastname AS Apellido, u.firstname AS Nombre, ROUND(qg.grade,2) AS Calificación, from_unixtime(qg.timemodified) AS 'Fecha de realización', from_unixtime(q.timeclose) AS 'Fecha de Cierre'
 FROM mdl_quiz q JOIN mdl_course c ON q.course = c.id
 				JOIN mdl_quiz_grades qg ON q.id = qg.quiz
@@ -20,7 +26,7 @@ FROM mdl_quiz q JOIN mdl_course c ON q.course = c.id
 						JOIN mdl_groups_members mgm ON mg.id = mgm.groupid
 						WHERE mc.id = @course) AS gmem ON qg.userid = gmem.userid
 
-WHERE c.id = @course #AND q.name LIKE '%Feb%'
+WHERE c.id = @course AND u.lastname = 'SANCHEZ GOMEZ' #AND q.name LIKE '%Feb%'
 
 #WHERE from_unixtime(q.timeclose) > '2019-06-24'
 
